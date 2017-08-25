@@ -1,0 +1,21 @@
+<!-- views/partials/head.ejs -->
+
+<meta charset="UTF-8">
+<title>Super Awesome</title>
+
+<!-- CSS (load bootstrap from a CDN) -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<style>
+    body    { padding:5%; }
+</style>
+
+<body>
+	<form class="input-group" method="post" action="/signup">
+		<label>Email</label><br>
+		<input class="form-control" type="text" name="email" placeholder="Enter Email"><br><br>
+		<label>Password</label><br>
+		<input class="form-control" type="password" name="password" placeholder="Enter password">
+		<br><br>
+		<button class="button-classic" type="submit">Signup</button>
+	</form>
+</body>

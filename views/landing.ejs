@@ -1,0 +1,41 @@
+<!-- views/partials/head.ejs -->
+
+<meta charset="UTF-8">
+<title>Gallery</title>
+
+<!-- CSS (load bootstrap from a CDN) -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+	body { padding:5%; }
+	.image { height: 300px;}
+	a { color: white; }
+</style>
+
+
+<body>
+	<div class="jumbotron">
+		<h1>Welcome To The Gallery</h1>
+		<p>Signin/Signup below to be able to upload images</p>
+		<!-- Trigger the modal with a button -->
+		<button type="button" class="btn btn-primary"><a href="/signup">Signup</a></button>
+		<button class="btn btn-primary"><a href="/signin">Signin</a></button>
+	</div>
+
+	<div class="row">
+		<% if (images.length == 0) { %>
+			<div class="col-sm-3 col-md-3">
+				<h2>There are no images</h2>
+			</div>
+		<% } %>
+		<% images.forEach(function(image) { %>
+		<div class="col-sm-3 col-md-3">
+			<div class="thumbnail">
+				<img src="<%=image%>" class="image">
+			</div>
+		</div>
+		<% }); %>
+	</div>
+
+</body>

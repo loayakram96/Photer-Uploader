@@ -1,0 +1,14 @@
+{
+  "name": "task",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "*",
+    "cookie-parser": "^1.4.3",
+    "ejs": "*",
+    "express": "*",
+    "express-basic-auth": "^1.1.1",
+    "formidable": "*",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "*"
+  }
+}
